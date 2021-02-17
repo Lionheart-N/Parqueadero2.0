@@ -22,6 +22,7 @@ public class RegistrarParqueadero extends javax.swing.JFrame {
 
     private Parqueadero parqueadero;
     private Controlador controlador;
+    
     /**
      * Creates new form registrarParqueadero
      */
@@ -249,16 +250,11 @@ public class RegistrarParqueadero extends javax.swing.JFrame {
             parqueadero.setTelefono(txt_telefono.getText());
             parqueadero.setLocalidad((String) box_localidad.getSelectedItem());
             parqueadero.setNit(txt_nit.getText());
-           
-            try{
-                controlador.incluirParqueadero(parqueadero);          
-            }catch(CaException e1){
-                System.out.println("Error --> " + e1 + e1.getMessage());
-            }finally{
-                Area area = new Area();
-                area.setVisible(true);
-                this.dispose();
-            }
+                      
+            Area area = new Area();
+            area.setMiParqueadero(parqueadero);
+            area.setVisible(true);
+            this.dispose();
            
             
             
