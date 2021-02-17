@@ -19,7 +19,7 @@ import util.ServiceLocator;
  *
  * @author WIN10
  */
-public class AreaDAO {
+public class AreaDAO {//Holaaa
     private Area miArea;
     private ServiceLocator conexion = new ServiceLocator();
     
